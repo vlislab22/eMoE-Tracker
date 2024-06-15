@@ -33,9 +33,6 @@
         <div class="row">
             <h1 class="col-md-12 text-center">
                 eMoE-Tracker: Environmental MoE-based Transformer for Robust Event-guided Object Tracking<br /> 
-                <small>
-                    CVPR 2024 Highlight
-                </small>
             </h1>
         </div>
         
@@ -113,14 +110,26 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-	Event cameras have recently been shown beneficial for practical vision tasks, such as action recognition, thanks to their high temporal resolution, power efficiency, and reduced privacy concerns. 
-        However, current research is hindered by 1) the difficulty in processing events because of their prolonged duration and dynamic actions with complex and ambiguous semantics and 2) the redundant action depiction of the event frame representation with fixed stacks.  
-    	We find language naturally conveys abundant semantic information, rendering it stunningly superior in reducing semantic uncertainty.  In light of this, we propose ExACT, a novel approach that, for the first time, 
-   	tackles event-based action recognition from a cross-modal conceptualizing perspective. Our ExACT brings two technical contributions. 
-	Firstly, we propose an adaptive fine-grained event (AFE) representation to adaptively filter out the repeated events for the stationary objects while preserving dynamic ones. 
-	This subtly enhances the performance of ExACT without extra computational cost. Then, we propose a conceptual reasoning-based uncertainty estimation module, which simulates the recognition process to enrich the semantic representation. 
-	In particular, conceptual reasoning builds the temporal relation based on the action semantics, and uncertainty estimation tackles the semantic uncertainty of actions based on the distributional representation. 
-    	Experiments show that our ExACT achieves superior recognition accuracy of 94.83%(+2.23%), 90.10%(+37.47%) and 67.24% on PAF, HARDVS and our SeAct datasets respectively.
+	The unique complementarity of frame-based andevent cameras for high frame rate object tracking has recentlyinspired some research attempts to develop multi-modal fusion
+approaches. However, these methods directly fuse both modalitiesand thus ignore the environmental attributes, e.g., motion blur,illumination variance, occlusion, scale variation, etc. Meanwhile,
+no interaction between search and template features makes distinguishing target objects and backgrounds difficult. As a result, performance degradation is induced especially in challenging conditions. This paper proposes a novel and effective Transformer-
+based event-guided tracking framework, called eMoE-Tracker,
+which achieves new SOTA performance under various conditions.
+Our key idea is to disentangle the environment into several
+learnable attributes to dynamically learn the attribute-specific
+features for better interaction and discriminability between the
+target information and background. To achieve the goal, we
+first propose an environmental Mix-of-Experts (eMoE) module
+that is built upon the environmental Attributes Disentanglement
+to learn attribute-specific features and environmental Attributes
+Gating to assemble the attribute-specific features by the learnable
+attribute scores dynamically. The eMoE module is a subtle router
+that fine-tunes the transformer backbone more efficiently. We
+then introduce a contrastive relation modeling (CRM) module
+to improve interaction and discriminability between the target
+information and background. Extensive experiments on diverse
+event-based benchmark datasets showcase the superior perfor-
+mance of our eMoE-Tracker compared to the prior arts. 
                 </p>
             </div>
         </div>
