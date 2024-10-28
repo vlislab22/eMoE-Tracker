@@ -118,33 +118,14 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-	The unique complementarity of frame-based and
-event cameras for high frame rate object tracking has recently
-inspired some research attempts to develop multi-modal fusion
-approaches. However, these methods directly fuse both modalities
-and thus ignore the environmental attributes, e.g., motion blur,
-illumination variance, occlusion, scale variation, etc. Meanwhile,
-no interaction between search and template features makes dis-
-tinguishing target objects and backgrounds difficult. As a result,
-performance degradation is induced especially in challenging con-
-ditions. This paper proposes a novel and effective Transformer-
-based event-guided tracking framework, called eMoE-Tracker,
-which achieves new SOTA performance under various conditions.
-Our key idea is to disentangle the environment into several
-learnable attributes to dynamically learn the attribute-specific
-features for better interaction and discriminability between the
-target information and background. To achieve the goal, we
-first propose an environmental Mix-of-Experts (eMoE) module
-that is built upon the environmental Attributes Disentanglement
-to learn attribute-specific features and environmental Attributes
-Gating to assemble the attribute-specific features by the learnable
-attribute scores dynamically. The eMoE module is a subtle router
-that fine-tunes the transformer backbone more efficiently. We
-then introduce a contrastive relation modeling (CRM) module
-to improve interaction and discriminability between the target
-information and background. Extensive experiments on diverse
-event-based benchmark datasets showcase the superior perfor-
-mance of our eMoE-Tracker compared to the prior arts. 
+	The unique complementarity of frame-based and event cameras for high frame rate object tracking has recently inspired some research attempts to develop multi-modal fusion approaches. 
+        However, these methods directly fuse both modalities and thus ignore the environmental attributes, \eg, motion blur, illumination variance, occlusion, scale variation, etc. Meanwhile, insufficient interaction between search and template features makes distinguishing target objects and backgrounds difficult. 
+	As a result, performance degradation is induced especially in challenging conditions.  This paper proposes a novel and effective Transformer-based event-guided tracking framework, called \textbf{eMoE-Tracker}, which achieves new SOTA performance under various conditions. 
+	Our key idea is to disentangle the environment into several learnable attributes to dynamically learn the attribute-specific features and strengthen the target information by improving the interaction between the target template and search regions. 
+	To achieve the goal, we first propose an environmental Mix-of-Experts (eMoE) module that is built upon the environmental Attributes Disentanglement to learn attribute-specific features and environmental Attributes Gating to assemble the attribute-specific features by the learnable attribute scores dynamically. 
+	The eMoE module is a subtle router that prompt-tunes the transformer backbone more efficiently.  
+        We then introduce a contrastive relation modeling (CRM) module to emphasize target information by leveraging a contrastive learning strategy between the target template and search regions. 
+        Extensive experiments on diverse event-based benchmark datasets showcase the superior performance of our eMoE-Tracker compared to the prior arts.
                 </p>
             </div>
         </div>
